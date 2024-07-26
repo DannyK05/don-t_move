@@ -8,19 +8,21 @@ main {
   background-color: rgb(50, 50, 71);
   padding: 0px;
   display: flex;
+  height: 100vh;
   align-items: center;
   justify-content: center;
 }
-main div {
+main div.question {
   display: flex;
   flex-direction: column;
   padding: 16px 8px;
   width: 100%;
   height: 100vh;
+  animation: k;
   align-items: center;
   justify-content: center;
 }
-main div button {
+main div.question button {
   background-color: white;
   width: 30%;
   padding: 16px;
@@ -29,9 +31,54 @@ main div button {
   color: rgb(50, 50, 71);
   border-radius: 20px;
 }
-main div p {
+main div.question p {
   font-size: 36px;
   color: white;
+}
+main div.english {
+  display: none;
+  width: 100%;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+main div.english span {
+  margin: 20px 0px;
+  font-size: 48px;
+  color: white;
+}
+main div.spanish {
+  display: none;
+  width: 100%;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+main div.spanish span {
+  margin: 20px 0px;
+  font-size: 48px;
+  color: white;
+}
+
+@keyframes disappear {
+  from {
+    display: none;
+  }
+  to {
+    display: flex;
+  }
+}
+@keyframes appear {
+  from {
+    display: none;
+    scale: 0;
+  }
+  to {
+    display: flex;
+    scale: 1;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
