@@ -4,17 +4,20 @@ const spanish = document.getElementsByClassName("spanish")[0];
 const englishBtn = document.getElementById("englishBtn");
 const spanishBtn = document.getElementById("spanishBtn");
 
-function showEnglish (){
-    question.style.display = "none"
-    english.style.display = "flex"
-    spanish.style.display = "none"
+function showEnglish() {
+  question.style.animation = "disappear 1s";
+  question.style.display = "none";
+  english.style.display = "flex";
+  spanish.style.display = "none";
+  english.style.animation = "appear 1s";
 }
 
-function showSpanish (){
-    question.style.display = "none"
-    english.style.display = "none"
-    spanish.style.display = "flex"
+function showSpanish() {
+  question.style.display = "none";
+  english.style.display = "none";
+  spanish.style.display = "flex";
+  spanish.style.animation = "appear 1.5s";
 }
 
 englishBtn.addEventListener("click", showEnglish);
-spanishBtn.addEventListener("click", showSpanish );
+spanishBtn.addEventListener("click", showSpanish);
