@@ -2,15 +2,47 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  overflow: hidden;
+  font-family: "Laffayette";
 }
 
+@font-face {
+  font-family: "Laffayette";
+  src: url("./assets/fonts/Laffayette_Comic_Pro.ttf");
+}
 main {
-  background-color: rgb(50, 50, 71);
+  background-image: url("./assets/images/green-checkers-bg.jpg");
   padding: 0px;
   display: flex;
   height: 100vh;
   align-items: center;
   justify-content: center;
+}
+main img.spanish-woman {
+  position: absolute;
+  bottom: 20%;
+  right: 30%;
+  z-index: 10;
+}
+main img.english-man {
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  z-index: 100;
+}
+main img.eyes {
+  position: absolute;
+  display: none;
+  z-index: 10;
+  top: 10px;
+  width: 25%;
+}
+main img.point {
+  position: absolute;
+  display: none;
+  width: 20%;
+  bottom: 0px;
+  left: 30%;
 }
 main div.question {
   display: flex;
@@ -19,7 +51,6 @@ main div.question {
   padding: 16px 8px;
   width: 100%;
   height: 100vh;
-  animation: k;
   align-items: center;
   justify-content: center;
 }
@@ -34,7 +65,7 @@ main div.question button {
 }
 main div.question p {
   font-size: 36px;
-  color: white;
+  color: rgb(26, 114, 14);
 }
 main div.english {
   display: none;
@@ -47,7 +78,7 @@ main div.english {
 main div.english span {
   margin: 20px 0px;
   font-size: 48px;
-  color: white;
+  color: rgb(26, 114, 14);
 }
 main div.spanish {
   display: none;
@@ -60,13 +91,20 @@ main div.spanish {
 main div.spanish span {
   margin: 20px 0px;
   font-size: 48px;
-  color: white;
+  color: rgb(26, 114, 14);
+}
+
+footer {
+  position: fixed;
+  color: rgb(26, 114, 14);
+  bottom: 10px;
+  font-weight: bold;
 }
 
 @keyframes disappear {
   from {
     display: flex;
-    scale: 1;
+    scale: 1.5;
   }
   to {
     display: none;
@@ -80,6 +118,83 @@ main div.spanish span {
   }
   to {
     display: flex;
-    scale: 1;
+    scale: 1.5;
   }
-} /*# sourceMappingURL=index.css.map */
+}
+@media (max-width: 480px) {
+  main img.english-man {
+    position: fixed;
+    top: 14%;
+    right: 0%;
+    z-index: 1;
+  }
+  main img.spanish-woman {
+    position: fixed;
+    left: 0%;
+    bottom: 18%;
+  }
+  main img.eyes {
+    width: 100%;
+  }
+  main img.point {
+    width: 60%;
+    left: 15%;
+    bottom: 20px;
+  }
+  main div.question #englishBtn {
+    z-index: 10;
+  }
+  main div.question button {
+    width: 100%;
+  }
+}
+@media (min-width: 481px) and (max-width: 767px) {
+  main img.english-man {
+    position: fixed;
+    top: 14%;
+    left: 55%;
+  }
+  main img.spanish-woman {
+    position: fixed;
+    left: 0%;
+    bottom: 18%;
+  }
+  main img.eyes {
+    width: 100%;
+  }
+  main img.point {
+    width: 40%;
+    left: 28%;
+    bottom: 20px;
+  }
+  main div.question button {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  main img.english-man {
+    position: fixed;
+    top: 26%;
+    left: 58%;
+    z-index: 1;
+  }
+  main img.spanish-woman {
+    position: fixed;
+    left: 0%;
+    bottom: 28%;
+  }
+  main img.eyes {
+    width: 100%;
+  }
+  main img.point {
+    width: 50%;
+    left: 28%;
+    bottom: 20px;
+  }
+  main div.question #englishBtn {
+    z-index: 10;
+  }
+  main div.question button {
+    width: 100%;
+  }
+}/*# sourceMappingURL=index.css.map */
